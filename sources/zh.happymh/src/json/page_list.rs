@@ -55,15 +55,15 @@ fn collect_urls(value: &serde_json::Value, out: &mut Vec<String>, depth: u8) {
 }
 
 impl PageList {
-	pub fn get_pages(_manga_id: String, chapter_id: String) -> Result<Vec<Page>> {
+	pub fn get_pages(manga_id: String, chapter_id: String) -> Result<Vec<Page>> {
 		let url = format!(
-			"{}/v2.0/apis/manga/reading?code={}&v=v3.1818134",
-			BASE_URL, chapter_id
+			"{}/v2.0/apis/manga/reading?code={}&cid={}&v=v3.1919111",
+			BASE_URL, manga_id, chapter_id
 		);
 		let json: serde_json::Value = Request::get(url.clone())?
 			.header(
 				"Referer",
-				&format!("{}/mangaread/{}/{}", BASE_URL, _manga_id.clone(), chapter_id.clone()),
+				&format!("{}/mangaread/{}/{}", BASE_URL, manga_id.clone(), chapter_id.clone()),
 			)
 			.header("Origin", BASE_URL)
 			.header("X-Requested-With", "XMLHttpRequest")
