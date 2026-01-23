@@ -31,22 +31,40 @@ impl PageList {
 			.get("data")
 			.and_then(|v| v.as_object())
 			.ok_or_else(|| error!("Expected data object"))?;
+
 		let list = data
 			.get("scans")
-			.and_then(|v| v.as_array())
-			.ok_or_else(|| error!("Expected scans array"))?;
+			.or_else(|| data.get("items"))
+			.or_else(|| data.get("images"))
+			.or_else(|| data.get("list"))
+			.and_then(|v| {
+				v.as_array().or_else(|| {
+					v.as_object()
+						.and_then(|o| o.get("items"))
+						.and_then(|v| v.as_array())
+				})
+			})
+			.ok_or_else(|| error!("Expected page list array"))?;
 		let mut pages: Vec<Page> = Vec::new();
 
 		for item in list.iter() {
-			let item = match item.as_object() {
-				Some(item) => item,
-				None => continue,
-			};
 			let url = item
-				.get("url")
-				.and_then(|v| v.as_str())
-				.unwrap_or_default()
-				.to_string();
+				.as_str()
+				.map(|s| s.to_string())
+				.or_else(|| {
+					item.as_object().and_then(|o| {
+						o.get("url")
+							.or_else(|| o.get("src"))
+							.or_else(|| o.get("image"))
+							.or_else(|| o.get("img"))
+							.and_then(|v| v.as_str())
+							.map(|s| s.to_string())
+					})
+				})
+				.unwrap_or_default();
+			if url.is_empty() {
+				continue;
+			}
 			pages.push(Page {
 				content: aidoku::PageContent::url(url),
 				..Default::default()

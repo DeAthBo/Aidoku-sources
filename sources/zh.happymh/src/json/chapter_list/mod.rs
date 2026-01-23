@@ -64,11 +64,20 @@ impl ChapterList {
 					Some(item) => item,
 					None => continue,
 				};
+				// Happymh chapter ids are returned as `id` (number) in newer API responses.
+				// Keep a fallback to the older `codes` field (string) for compatibility.
 				let id = item
-					.get("codes")
-					.and_then(|v| v.as_str())
-					.unwrap_or_default()
-					.to_string();
+					.get("id")
+					.or_else(|| item.get("codes"))
+					.and_then(|v| {
+						v.as_str()
+							.map(|s| s.to_string())
+							.or_else(|| v.as_i64().map(|n| n.to_string()))
+					})
+					.unwrap_or_default();
+				if id.is_empty() {
+					continue;
+				}
 				let title = item
 					.get("chapterName")
 					.and_then(|v| v.as_str())
