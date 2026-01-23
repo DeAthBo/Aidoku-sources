@@ -85,7 +85,8 @@ impl ChapterList {
 					.to_string();
 				let chapter_or_volume =
 					extract_chapter_number(&title).unwrap_or((all_chapters.len() + 1) as f32);
-				let url = format!("{}/mangaread/{}", BASE_URL, id);
+				// The web reader uses `/mangaread/{manga_id}/{chapter_id}`.
+				let url = format!("{}/mangaread/{}/{}", BASE_URL, manga_id, id);
 
 				let (ch, vo) = if title.trim().ends_with('卷') {
 					(-1.0, chapter_or_volume)

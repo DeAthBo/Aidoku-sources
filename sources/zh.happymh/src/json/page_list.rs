@@ -18,7 +18,7 @@ impl PageList {
 		let json: serde_json::Value = Request::get(url.clone())?
 			.header(
 				"Referer",
-				&format!("{}/mangaread/{}", BASE_URL, chapter_id.clone()),
+				&format!("{}/mangaread/{}/{}", BASE_URL, _manga_id.clone(), chapter_id.clone()),
 			)
 			.header("Origin", BASE_URL)
 			.header("X-Requested-With", "XMLHttpRequest")
