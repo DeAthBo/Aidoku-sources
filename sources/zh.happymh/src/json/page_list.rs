@@ -53,6 +53,19 @@ impl PageList {
 			None => bail!("Expected scans array"),
 		};
 		let mut pages: Vec<Page> = Vec::new();
+		
+		    // ===== 原始顺序日志：打印所有图片的索引和 URL（不进行任何过滤）=====
+    aidoku::println!("[PageList] --- RAW SCANS ORDER (before filtering) ---");
+    for (raw_idx, scan_value) in list.iter().enumerate() {
+        if let Some(obj) = scan_value.as_object() {
+            let n = obj.get("n").and_then(|v| v.as_i64()).unwrap_or(-1);
+            let url = obj.get("url").and_then(|v| v.as_str()).unwrap_or("NO_URL");
+            aidoku::println!("[PageList] RAW[{}]: n={}, url={}", raw_idx, n, url);
+        } else {
+            aidoku::println!("[PageList] RAW[{}]: <invalid object>", raw_idx);
+        }
+    }
+    aidoku::println!("[PageList] --- END RAW SCANS ---");
 
 		for item in list.iter() {
 			let item = match item.as_object() {
