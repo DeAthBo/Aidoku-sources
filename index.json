@@ -1,0 +1,17 @@
+{
+  "name": "Aidoku Community Sources",
+  "sources": [
+    {
+      "id": "zh.happymh",
+      "name": "Happymh",
+      "version": 5,
+      "iconURL": "icons/zh.happymh-v5.png",
+      "downloadURL": "sources/zh.happymh-v5.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 1,
+      "baseURL": "https://m.happymh.com"
+    }
+  ]
+}
