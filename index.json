@@ -1,0 +1,257 @@
+{
+  "name": "Aidoku Community Sources",
+  "sources": [
+    {
+      "id": "zh.bakamh",
+      "name": "巴卡漫画",
+      "version": 2,
+      "iconURL": "icons/zh.bakamh-v2.png",
+      "downloadURL": "sources/zh.bakamh-v2.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 2,
+      "baseURL": "https://bakamh.com"
+    },
+    {
+      "id": "zh.baozimanhua",
+      "name": "包子漫畫",
+      "version": 5,
+      "iconURL": "icons/zh.baozimanhua-v5.png",
+      "downloadURL": "sources/zh.baozimanhua-v5.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 1,
+      "baseURL": "https://www.baozimh.com"
+    },
+    {
+      "id": "zh.bilimanga",
+      "name": "嗶哩漫畫",
+      "version": 3,
+      "iconURL": "icons/zh.bilimanga-v3.png",
+      "downloadURL": "sources/zh.bilimanga-v3.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 1,
+      "baseURL": "https://www.bilimanga.net"
+    },
+    {
+      "id": "zh.boylove",
+      "name": "香香腐宅",
+      "version": 12,
+      "iconURL": "icons/zh.boylove-v12.png",
+      "downloadURL": "sources/zh.boylove-v12.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 2,
+      "baseURL": "https://boylove.cc"
+    },
+    {
+      "id": "zh.copymanga",
+      "name": "拷貝漫畫",
+      "version": 19,
+      "iconURL": "icons/zh.copymanga-v19.png",
+      "downloadURL": "sources/zh.copymanga-v19.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 1,
+      "baseURL": "https://www.copy3000.com"
+    },
+    {
+      "id": "zh.dm5",
+      "name": "动漫屋",
+      "version": 2,
+      "iconURL": "icons/zh.dm5-v2.png",
+      "downloadURL": "sources/zh.dm5-v2.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 1,
+      "baseURL": "https://www.dm5.com"
+    },
+    {
+      "id": "zh.godamanga",
+      "name": "G站漫畫",
+      "version": 1,
+      "iconURL": "icons/zh.godamanga-v1.png",
+      "downloadURL": "sources/zh.godamanga-v1.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 1,
+      "baseURL": "https://godamh.com"
+    },
+    {
+      "id": "zh.happymh",
+      "name": "Happymh",
+      "version": 6,
+      "iconURL": "icons/zh.happymh-v6.png",
+      "downloadURL": "sources/zh.happymh-v6.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 1,
+      "baseURL": "https://m.happymh.com"
+    },
+    {
+      "id": "zh.jmcomic",
+      "name": "禁漫天堂",
+      "version": 2,
+      "iconURL": "icons/zh.jmcomic-v2.png",
+      "downloadURL": "sources/zh.jmcomic-v2.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 2,
+      "baseURL": "https://18comic.vip"
+    },
+    {
+      "id": "zh.komiic",
+      "name": "Komiic",
+      "version": 1,
+      "iconURL": "icons/zh.komiic-v1.png",
+      "downloadURL": "sources/zh.komiic-v1.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 0,
+      "baseURL": "https://komiic.com"
+    },
+    {
+      "id": "zh.mangabz",
+      "name": "Māngabz",
+      "version": 5,
+      "iconURL": "icons/zh.mangabz-v5.png",
+      "downloadURL": "sources/zh.mangabz-v5.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 1,
+      "baseURL": "https://mangabz.com"
+    },
+    {
+      "id": "zh.manhuagui",
+      "name": "Manhuagui",
+      "version": 9,
+      "iconURL": "icons/zh.manhuagui-v9.png",
+      "downloadURL": "sources/zh.manhuagui-v9.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 1,
+      "baseURL": "https://www.manhuagui.com"
+    },
+    {
+      "id": "zh.mycomic",
+      "name": "MYCOMIC",
+      "version": 2,
+      "iconURL": "icons/zh.mycomic-v2.png",
+      "downloadURL": "sources/zh.mycomic-v2.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 1,
+      "baseURL": "https://mycomic.com"
+    },
+    {
+      "id": "zh.noyacg",
+      "name": "NoyAcg",
+      "version": 2,
+      "iconURL": "icons/zh.noyacg-v2.png",
+      "downloadURL": "sources/zh.noyacg-v2.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 1,
+      "baseURL": "https://beta.noyteam.online"
+    },
+    {
+      "id": "zh.picacomic",
+      "name": "嗶咔漫畫",
+      "version": 4,
+      "iconURL": "icons/zh.picacomic-v4.png",
+      "downloadURL": "sources/zh.picacomic-v4.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 2,
+      "baseURL": "https://manhuabika.com"
+    },
+    {
+      "id": "zh.relamanhua",
+      "name": "熱辣漫畫",
+      "version": 2,
+      "iconURL": "icons/zh.relamanhua-v2.png",
+      "downloadURL": "sources/zh.relamanhua-v2.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 1,
+      "baseURL": "https://www.manga2026.com"
+    },
+    {
+      "id": "zh.rumanhua",
+      "name": "入漫画",
+      "version": 1,
+      "iconURL": "icons/zh.rumanhua-v1.png",
+      "downloadURL": "sources/zh.rumanhua-v1.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 0,
+      "baseURL": "https://m.rumanhua.org"
+    },
+    {
+      "id": "zh.se8",
+      "name": "韩漫库",
+      "version": 1,
+      "iconURL": "icons/zh.se8-v1.png",
+      "downloadURL": "sources/zh.se8-v1.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 2,
+      "baseURL": "https://se8.us"
+    },
+    {
+      "id": "zh.wnacg",
+      "name": "紳士漫畫",
+      "version": 3,
+      "iconURL": "icons/zh.wnacg-v3.png",
+      "downloadURL": "sources/zh.wnacg-v3.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 2,
+      "baseURL": "https://www.wnacg.com"
+    },
+    {
+      "id": "zh.zaimanhua",
+      "name": "再漫画",
+      "version": 6,
+      "iconURL": "icons/zh.zaimanhua-v6.png",
+      "downloadURL": "sources/zh.zaimanhua-v6.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 1,
+      "baseURL": "https://www.zaimanhua.com"
+    },
+    {
+      "id": "zh.zerobyw",
+      "name": "zero搬运网",
+      "version": 1,
+      "iconURL": "icons/zh.zerobyw-v1.png",
+      "downloadURL": "sources/zh.zerobyw-v1.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 1,
+      "baseURL": "https://www.zerobyw33.com"
+    }
+  ]
+}
