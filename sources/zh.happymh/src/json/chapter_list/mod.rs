@@ -3,7 +3,7 @@ use aidoku::{
 	Chapter, Result,
 	alloc::{Vec, string::ToString as _, vec},
 	error,
-	imports::net::Request,
+	imports::{net::Request, std::current_date},
 	prelude::format,
 };
 use regex::Regex;
@@ -37,9 +37,10 @@ impl ChapterList {
 		let mut page = 1;
 
 		loop {
+			let request_id = (current_date() * 1000).to_string();
 			let url = format!(
-				"{}/v2.0/apis/manga/chapterByPage?code={}&page={}&lang=cn&order=asc",
-				BASE_URL, manga_id, page
+				"{}/v2.0/apis/manga/chapterByPage?code={}&page={}&lang=cn&order=asc&_t={}",
+				BASE_URL, manga_id, page, request_id
 			);
 			let json: serde_json::Value = Request::get(url.clone())?
 				.header("Origin", BASE_URL)

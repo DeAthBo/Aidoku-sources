@@ -16,7 +16,7 @@ impl PageList {
 		let request_id = (current_date() * 1000).to_string();
 		let ga_timestamp = generate_ga_timestamp();
 		let url = format!(
-			"{}/v2.0/apis/manga/reading?code={}&cid={}&v=v4.300101&_t={}",
+			"{}/v2.0/apis/manga/reading?code={}&cid={}&v=v4.300102&_t={}",
 			BASE_URL, manga_id, chapter_id, request_id
 		);
 		let json: serde_json::Value = Request::get(url.clone())?
