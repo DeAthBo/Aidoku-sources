@@ -2,7 +2,7 @@
 	"info": {
 		"id": "zh.hanabimanga",
 		"name": "花火漫画",
-		"version": 1,
+		"version": 2,
 		"url": "https://web.hanabimanga.com",
 		"contentRating": 1,
 		"languages": ["zh"]

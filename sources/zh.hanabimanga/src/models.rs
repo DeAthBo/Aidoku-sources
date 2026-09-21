@@ -90,9 +90,10 @@ fn scanlators(category: &str) -> Option<Vec<String>> {
 }
 
 pub fn chapters(mut chapters: Vec<ComicChapter>, comic_id: &str) -> Vec<Chapter> {
-	// Single volumes share the index range of the regular chapters, so they are
-	// listed after them.
-	chapters.sort_by_key(|chapter| (chapter.category == "volume", chapter.idx));
+	// Aidoku expects the newest chapter first, so the regular chapters run from
+	// the newest to the oldest, followed by the single volumes, which share
+	// their index range anyway.
+	chapters.sort_by_key(|chapter| (chapter.category == "volume", -chapter.idx));
 	chapters
 		.into_iter()
 		.map(|chapter| chapter.into_chapter(comic_id))
