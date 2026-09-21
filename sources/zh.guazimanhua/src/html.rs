@@ -131,13 +131,17 @@ impl MangaPage for Document {
 			})
 			.unwrap_or_default();
 
-		// The grid lists the newest chapter first.
-		chapters.reverse();
-		for (index, chapter) in chapters.iter_mut().enumerate() {
-			chapter.chapter_number.get_or_insert((index + 1) as f32);
-		}
+                // The grid already lists the newest chapter first, which is the
+                // order Aidoku expects. Titles that aren't numbered, like `预告`,
+                // are numbered by position counted from the oldest chapter.
+                let count = chapters.len();
+                for (index, chapter) in chapters.iter_mut().enumerate() {
+                        chapter
+                                .chapter_number
+                                .get_or_insert((count - index) as f32);
+                }
 
-		chapters
+                chapters
 	}
 }
 
