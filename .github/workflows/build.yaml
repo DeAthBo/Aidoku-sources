@@ -58,7 +58,7 @@ jobs:
 
       - name: Build source list
         run: |
-          aidoku build sources/zh.guazimanhua/package.aix sources/zh.hanabimanga/package.aix sources/zh.miaoqu/package.aix --name "Aidoku Community Sources"
+          aidoku build sources/zh.guazimanhua/package.aix sources/zh.hanabimanga/package.aix sources/zh.miaoqu/package.aix --name "DeAthBo's Aidoku Sources"
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.7.2
