@@ -1,7 +1,7 @@
 use crate::net::MOBILE_URL;
 use aidoku::{
 	Chapter, Manga, MangaPageResult, Page, PageContent, Result, SelectFilter,
-	alloc::{String, Vec, format, string::ToString as _, vec},
+	alloc::{String, Vec, borrow::Cow, format, string::ToString as _, vec},
 	error,
 	imports::html::{Document, Element},
 };
@@ -61,11 +61,11 @@ fn manga_from_element(element: Element) -> Option<Manga> {
 	Some(Manga {
 		key: link.attr("href")?.trim_start_matches('/').to_string(),
 		title: element.select_first(".manga-name")?.text()?,
-		cover: link
-			.attr("style")
-			.and_then(|style| style.split_once("background: url("))
-			.and_then(|(_, url)| url.split_once(')'))
-			.map(|(url, _)| url.to_string()),
+		cover: link.attr("style").and_then(|style| {
+			let (_, url) = style.split_once("background: url(")?;
+			let (url, _) = url.split_once(')')?;
+			Some(url.to_string())
+		}),
 		authors: element
 			.select_first(".manga-author")
 			.and_then(|author| author.text())
@@ -187,7 +187,8 @@ impl ChapterPage for Document {
 			.map_err(|_| error!("Invalid image data"))?;
 		let text = String::from_utf8(inner)
 			.map_err(|_| error!("Invalid image data"))?;
-		let images: Vec<Image> = serde_json::from_str(&text)?;
+		let images: Vec<Image> = serde_json::from_str(&text)
+			.map_err(|_| error!("Invalid image data"))?;
 
 		Ok(images
 			.into_iter()
@@ -225,7 +226,7 @@ impl GenresPage for Document {
 				if !href.contains("/tags/") {
 					return None;
 				}
-				Some((element.text()?, format!("tags/{id}")))
+				Some((Cow::Owned(element.text()?), Cow::Owned(format!("tags/{id}"))))
 			})
 			.collect::<(Vec<_>, Vec<_>)>();
 
