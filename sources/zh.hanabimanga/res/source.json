@@ -1,0 +1,20 @@
+{
+	"info": {
+		"id": "zh.hanabimanga",
+		"name": "花火漫画",
+		"version": 1,
+		"url": "https://web.hanabimanga.com",
+		"contentRating": 1,
+		"languages": ["zh"]
+	},
+	"listings": [
+		{
+			"id": "popular",
+			"name": "热门"
+		},
+		{
+			"id": "latest",
+			"name": "最新更新"
+		}
+	]
+}

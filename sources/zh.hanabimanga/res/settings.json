@@ -1,0 +1,45 @@
+[
+	{
+		"type": "group",
+		"title": "账号",
+		"footer": "匿名访问有额度限制,登录后可以解除。留空则使用匿名访问。",
+		"items": [
+			{
+				"type": "text",
+				"key": "email",
+				"title": "登录邮箱",
+				"placeholder": "user@example.com",
+				"autocapitalizationType": 0,
+				"autocorrectionDisabled": true
+			},
+			{
+				"type": "text",
+				"key": "password",
+				"title": "登录密码",
+				"autocapitalizationType": 0,
+				"autocorrectionDisabled": true
+			}
+		]
+	},
+	{
+		"type": "group",
+		"title": "浏览",
+		"items": [
+			{
+				"type": "select",
+				"key": "popularOrder",
+				"title": "热门漫画显示",
+				"values": [
+					"popularity_daily.desc.nullslast",
+					"popularity_weekly.desc.nullslast",
+					"popularity_monthly.desc.nullslast",
+					"rating_average.desc.nullslast",
+					"rating_count.desc.nullslast"
+				],
+				"titles": ["日榜", "周榜", "月榜", "评分", "人气"],
+				"default": "popularity_daily.desc.nullslast",
+				"refreshes": ["content"]
+			}
+		]
+	}
+]
