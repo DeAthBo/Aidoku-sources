@@ -1,0 +1,95 @@
+[
+	{
+		"type": "select",
+		"title": "分类",
+		"isGenre": true,
+		"canExclude": false,
+		"options": [
+			"全部",
+			"耽美",
+			"恋爱",
+			"校园",
+			"霸总",
+			"都市",
+			"穿越",
+			"古风",
+			"玄幻",
+			"奇幻",
+			"科幻",
+			"灵异",
+			"动作",
+			"悬疑",
+			"冒险",
+			"搞笑",
+			"热血",
+			"恐怖",
+			"系统",
+			"逆袭",
+			"脑洞",
+			"复仇",
+			"真人",
+			"其它"
+		],
+		"ids": [
+			"",
+			"41",
+			"9",
+			"29",
+			"5",
+			"42",
+			"8",
+			"23",
+			"25",
+			"31",
+			"22",
+			"21",
+			"54",
+			"11",
+			"30",
+			"15",
+			"13",
+			"14",
+			"148",
+			"97",
+			"55",
+			"61",
+			"17",
+			"27"
+		]
+	},
+	{
+		"type": "select",
+		"title": "地区",
+		"isGenre": false,
+		"canExclude": false,
+		"options": ["全部", "大陆", "欧美", "港台", "日韩", "国漫"],
+		"ids": ["", "42", "43", "77", "78", "338"]
+	},
+	{
+		"type": "select",
+		"title": "受众",
+		"isGenre": false,
+		"canExclude": false,
+		"options": ["全部", "男频", "女频"],
+		"ids": ["", "1", "2"]
+	},
+	{
+		"type": "select",
+		"title": "进度",
+		"isGenre": false,
+		"canExclude": false,
+		"options": ["全部", "连载中", "已完结"],
+		"ids": ["", "2", "1"]
+	},
+	{
+		"type": "sort",
+		"title": "排序",
+		"canAscend": false,
+		"options": ["今日热门", "人气", "更新", "评分"],
+		"ids": ["daily", "hits", "update", "score"],
+		"default": {
+			"index": 1,
+			"ascending": false
+		}
+	}
+]

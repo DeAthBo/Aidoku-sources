@@ -1,0 +1,20 @@
+{
+	"info": {
+		"id": "zh.guazimanhua",
+		"name": "瓜子漫画",
+		"version": 1,
+		"url": "https://www.guazimanhua.com",
+		"contentRating": 0,
+		"languages": ["zh"]
+	},
+	"listings": [
+		{
+			"id": "popular",
+			"name": "人气"
+		},
+		{
+			"id": "latest",
+			"name": "最新更新"
+		}
+	]
+}
