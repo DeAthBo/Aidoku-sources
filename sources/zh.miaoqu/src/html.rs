@@ -125,9 +125,10 @@ impl MangaPage for Document {
 	}
 
 	fn chapters(&self) -> Vec<Chapter> {
-		// The listed order is the reading order, and titles mix chapters with
-		// volumes (`第17卷`), so no chapter number is derived from them.
-		self.select("ul.list > li")
+		// Titles mix chapters with volumes (`第17卷`), so no chapter number is
+		// derived from them.
+		let mut chapters: Vec<Chapter> = self
+			.select("ul.list > li")
 			.map(|elements| {
 				elements
 					.filter_map(|element| {
@@ -141,7 +142,12 @@ impl MangaPage for Document {
 					})
 					.collect()
 			})
-			.unwrap_or_default()
+			.unwrap_or_default();
+
+		// The list is ordered oldest first, but Aidoku expects the newest one.
+		chapters.reverse();
+
+		chapters
 	}
 }
 
