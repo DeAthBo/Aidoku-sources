@@ -24,8 +24,8 @@ pub enum Url<'a> {
 
 impl Url<'_> {
 	pub fn request(&self) -> Result<Request> {
-		Request::get(self.to_string())?
-			.header("User-Agent", USER_AGENT)
+		Ok(Request::get(self.to_string())?
+			.header("User-Agent", USER_AGENT))
 	}
 }
 
