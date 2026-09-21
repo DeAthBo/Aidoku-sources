@@ -145,10 +145,16 @@ impl MangaPage for Document {
 	}
 }
 
-// Chapter titles are numbered like `334 鬼梦貘`, so the leading number can be
-// read directly, falling back to the position for the rest.
+// Chapter titles are numbered in a few different ways depending on the series:
+// `334 鬼梦貘`, `第319話：...` and `124-新的目标·禹州`.
 fn leading_number(title: &str) -> Option<f32> {
-	title.split_whitespace().next()?.parse().ok()
+        title
+                .trim_start_matches('第')
+                .chars()
+                .take_while(|char| char.is_ascii_digit())
+                .collect::<String>()
+                .parse()
+                .ok()
 }
 
 pub trait ChapterPage {
