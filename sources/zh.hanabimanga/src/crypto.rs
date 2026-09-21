@@ -2,7 +2,6 @@ use aidoku::{
 	Result,
 	alloc::{String, Vec},
 	error,
-	prelude::*,
 };
 use hmac::{Hmac, Mac};
 use sha2::{Digest, Sha256};

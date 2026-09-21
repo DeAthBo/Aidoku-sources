@@ -30,7 +30,8 @@ pub enum Url<'a> {
 
 impl Url<'_> {
 	pub fn request(&self) -> Result<Request> {
-		Request::get(self.to_string())?.header("apikey", ANONYMOUS_TOKEN)
+		Ok(Request::get(self.to_string())?
+			.header("apikey", ANONYMOUS_TOKEN))
 	}
 }
 
@@ -115,16 +116,16 @@ fn offset(page: i32) -> i32 {
 }
 
 pub fn post_json(path: &str, body: &[u8]) -> Result<Request> {
-	Request::post(format!("{BASE_URL}{path}"))?
+	Ok(Request::post(format!("{BASE_URL}{path}"))?
 		.header("apikey", ANONYMOUS_TOKEN)
 		.header("Content-Type", "application/json")
-		.body(body)
+		.body(body))
 }
 
 pub fn post_page_list(body: &[u8], token: &str) -> Result<Request> {
-	Request::post(format!("{BASE_URL}/functions/v1/sd-image-url"))?
+	Ok(Request::post(format!("{BASE_URL}/functions/v1/sd-image-url"))?
 		.header("apikey", ANONYMOUS_TOKEN)
 		.header("Authorization", &format!("Bearer {token}"))
 		.header("Content-Type", "application/json")
-		.body(body)
+		.body(body))
 }
