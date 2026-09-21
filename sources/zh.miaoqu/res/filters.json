@@ -1,0 +1,18 @@
+[
+	{
+		"type": "select",
+		"title": "进度",
+		"isGenre": false,
+		"canExclude": false,
+		"options": ["全部", "连载中", "已完结"],
+		"ids": ["", "finish/1", "finish/2"]
+	},
+	{
+		"type": "select",
+		"title": "排序",
+		"isGenre": false,
+		"canExclude": false,
+		"options": ["人气", "最新", "评分"],
+		"ids": ["order/hits", "order/addtime", "order/score"]
+	}
+]

@@ -1,0 +1,20 @@
+{
+	"info": {
+		"id": "zh.miaoqu",
+		"name": "喵趣漫画",
+		"version": 1,
+		"url": "https://www.miaoqumh.org",
+		"contentRating": 0,
+		"languages": ["zh"]
+	},
+	"listings": [
+		{
+			"id": "popular",
+			"name": "人气"
+		},
+		{
+			"id": "latest",
+			"name": "最新更新"
+		}
+	]
+}
