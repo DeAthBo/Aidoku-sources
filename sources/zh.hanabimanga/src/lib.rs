@@ -215,7 +215,8 @@ impl HanabiManga {
 			gotrue_meta_security: MetaSecurity {},
 		};
 		let json = serde_json::to_vec(&body).ok()?;
-		let result: LoginResult = post_json("/auth/v1/token?grant_type=password", &json)?
+		let result: LoginResult = post_json("/auth/v1/token?grant_type=password", &json)
+			.ok()?
 			.json_owned()
 			.ok()?;
 
