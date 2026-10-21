@@ -1,0 +1,23 @@
+[
+	{
+		"type": "group",
+		"title": "設定",
+		"items": [
+			{
+				"type": "switch",
+				"key": "optionalPages",
+				"title": "顯示附加頁面",
+				"subtitle": "分級警告頁、作者的話等",
+				"default": true
+			},
+			{
+				"type": "switch",
+				"key": "canvasSeries",
+				"title": "顯示 Canvas 作品",
+				"subtitle": "Canvas 作品由獨立創作者投稿",
+				"default": true,
+				"refreshes": ["listings"]
+			}
+		]
+	}
+]

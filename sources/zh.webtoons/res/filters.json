@@ -1,0 +1,58 @@
+[
+	{
+		"type": "select",
+		"id": "genre",
+		"title": "分類",
+		"isGenre": true,
+		"options": [
+			"全部",
+			"劇情",
+			"奇幻",
+			"喜劇",
+			"動作",
+			"日常",
+			"浪漫",
+			"超級英雄",
+			"科幻",
+			"驚悚",
+			"超自然",
+			"懸疑",
+			"運動",
+			"歷史",
+			"溫馨",
+			"恐怖",
+			"圖像小說",
+			"知識漫畫"
+		],
+		"ids": [
+			"",
+			"drama",
+			"fantasy",
+			"comedy",
+			"action",
+			"slice_of_life",
+			"romance",
+			"super_hero",
+			"sf",
+			"thriller",
+			"supernatural",
+			"mystery",
+			"sports",
+			"historical",
+			"heartwarming",
+			"horror",
+			"graphic_novel",
+			"tiptoon"
+		]
+	},
+	{
+		"type": "sort",
+		"id": "sort",
+		"canAscend": false,
+		"options": ["人氣", "讚數", "更新"],
+		"default": {
+			"index": 0,
+			"ascending": false
+		}
+	}
+]

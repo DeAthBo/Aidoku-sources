@@ -1,0 +1,29 @@
+{
+	"info": {
+		"id": "zh.webtoons",
+		"name": "WEBTOON 繁體中文",
+		"altNames": ["WEBTOON", "Webtoon"],
+		"version": 1,
+		"urls": [
+			"https://www.webtoons.com/zh-hant",
+			"https://m.webtoons.com/zh-hant"
+		],
+		"contentRating": 0,
+		"languages": ["zh"],
+		"minAppVersion": "0.7.2"
+	},
+	"listings": [
+		{
+			"id": "latest",
+			"name": "最新更新"
+		},
+		{
+			"id": "popular",
+			"name": "人氣"
+		},
+		{
+			"id": "top",
+			"name": "最多讚"
+		}
+	]
+}
