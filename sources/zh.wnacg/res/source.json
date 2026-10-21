@@ -2,14 +2,17 @@
 	"info": {
 		"id": "zh.wnacg",
 		"name": "紳士漫畫",
-		"version": 3,
+		"version": 4,
 		"urls": [
+			"https://www.wn001.cfd",
+			"https://www.wn002.cfd",
 			"https://www.wnacg.com",
 			"https://www.wnacg05.cc",
 			"https://www.wn07.ru"
 		],
 		"contentRating": 2,
-		"languages": ["zh"]
+		"languages": ["zh"],
+		"minAppVersion": "0.7.1"
 	},
 	"listings": [
 		{
@@ -46,6 +49,7 @@
 		}
 	],
 	"config": {
+		"allowsBaseUrlSelect": true,
 		"hidesFiltersWhileSearching": true,
 		"supportsTagSearch": true
 	}

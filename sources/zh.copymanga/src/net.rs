@@ -11,6 +11,8 @@ use strum::{AsRefStr, Display, EnumIs, FromRepr};
 
 #[derive(Display, EnumIs)]
 pub enum Url<'a> {
+	#[strum(to_string = "")]
+	Home,
 	#[strum(to_string = "/filter")]
 	GenresPage,
 	#[strum(to_string = "/comics?{0}")]
@@ -72,7 +74,9 @@ impl Url<'_> {
 						let url = Self::search(search_query)?;
 						return Ok(url);
 					}
-					_ => bail!("Invalid text filter ID: `{id}`"),
+					_ => {
+						bail!("Invalid text filter ID: `{id}`");
+					}
 				},
 
 				FilterValue::Sort {
@@ -85,13 +89,15 @@ impl Url<'_> {
 						sort = Sort::from_repr(index)
 							.ok_or_else(|| error!("Invalid `排序` index: `{index}`"))?;
 					}
-					_ => bail!("Invalid sort filter ID: `{id}`"),
+					_ => {
+						bail!("Invalid sort filter ID: `{id}`");
+					}
 				},
 
 				FilterValue::Select { ref id, ref value } => match id.as_str() {
-					"地区" => r#type = value,
-					"状态" => status = value,
-					"题材" => genre = value.into(),
+					"地区" | "地區" => r#type = value,
+					"状态" | "狀態" => status = value,
+					"题材" | "題材" => genre = value.into(),
 					"genre" => {
 						let genres = Self::GenresPage.request()?.html()?.filter()?;
 						let genre_id = genres
@@ -102,10 +108,14 @@ impl Url<'_> {
 							.ok_or_else(|| error!("Genre ID not found for option: `{value}`"))?;
 						genre = genre_id.into();
 					}
-					_ => bail!("Invalid select filter ID: `{id}`"),
+					_ => {
+						bail!("Invalid select filter ID: `{id}`");
+					}
 				},
 
-				_ => bail!("Invalid filter: `{filter:?}`"),
+				_ => {
+					bail!("Invalid filter: `{filter:?}`");
+				}
 			}
 		}
 

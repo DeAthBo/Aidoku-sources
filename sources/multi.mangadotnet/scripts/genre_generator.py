@@ -1,5 +1,4 @@
 import json
-from typing import Dict
 
 import requests
 
@@ -34,10 +33,11 @@ def resolve_ptr_table_json(table: list, index: int):
 
 with requests.Session() as mangadot_session:
     mangadot_session.headers.update({
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:154.0) Gecko/20100101 Firefox/154.0',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0',
     })
-    cookies: Dict[str, str] = {
-        'cf_clearance': ''
+    cookies: dict[str, str] = {
+        'cf_clearance': '',
+        'ory_kratos_session': ''
     }
     mangadot_session.cookies.update(cookies)
 
