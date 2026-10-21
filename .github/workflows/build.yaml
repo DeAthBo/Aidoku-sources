@@ -37,7 +37,8 @@ jobs:
             sources/zh.guazimanhua/target/
             sources/zh.hanabimanga/target/
             sources/zh.miaoqu/target/
-          key: ${{ runner.os }}-cargo-${{ hashFiles('sources/zh.guazimanhua/Cargo.lock', 'sources/zh.hanabimanga/Cargo.lock', 'sources/zh.miaoqu/Cargo.lock') }}
+            sources/zh.webtoons/target/
+          key: ${{ runner.os }}-cargo-${{ hashFiles('sources/zh.guazimanhua/Cargo.lock', 'sources/zh.hanabimanga/Cargo.lock', 'sources/zh.miaoqu/Cargo.lock', 'sources/zh.webtoons/Cargo.lock') }}
           restore-keys: ${{ runner.os }}-cargo-
 
       - uses: ./.github/actions/install-aidoku-cli
@@ -46,7 +47,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          for source in sources/zh.guazimanhua sources/zh.hanabimanga sources/zh.miaoqu; do
+          for source in sources/zh.guazimanhua sources/zh.hanabimanga sources/zh.miaoqu sources/zh.webtoons; do
             [[ -f "$source/Cargo.toml" ]] || continue
 
             echo "::group::Packaging $source"
@@ -59,7 +60,7 @@ jobs:
 
       - name: Build source list
         run: |
-          aidoku build sources/zh.guazimanhua/package.aix sources/zh.hanabimanga/package.aix sources/zh.miaoqu/package.aix --name "DeAthBo's Aidoku Sources"
+          aidoku build sources/zh.guazimanhua/package.aix sources/zh.hanabimanga/package.aix sources/zh.miaoqu/package.aix sources/zh.webtoons/package.aix --name "DeAthBo's Aidoku Sources"
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.7.2
