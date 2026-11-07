@@ -20,6 +20,10 @@ use html::{ChapterPage as _, MangaPage as _};
 use net::Url;
 
 pub const BASE_URL: &str = "https://www.linovelib.com";
+/// Cloudflare rejects the runtime's default agent. Keep a desktop Chrome UA
+/// so the site serves the same templates the parsers were written against.
+pub const USER_AGENT: &str = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 \
+	(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36";
 /// Chapters are split into paginated fragments; cap the page count so a
 /// malformed chapter cannot fetch forever.
 const MAX_CHAPTER_PAGES: i32 = 50;
@@ -248,7 +252,9 @@ impl ImageRequestProvider for Linovelib {
 		url: String,
 		_context: Option<aidoku::PageContext>,
 	) -> Result<Request> {
-		Ok(Request::get(url)?.header("Referer", BASE_URL))
+		Ok(Request::get(url)?
+			.header("User-Agent", USER_AGENT)
+			.header("Referer", BASE_URL))
 	}
 }
 
