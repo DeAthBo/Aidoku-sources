@@ -2,7 +2,7 @@
 	"info": {
 		"id": "zh.linovelib",
 		"name": "哔哩轻小说 (linovelib)",
-		"version": 1,
+		"version": 2,
 		"url": "https://www.linovelib.com",
 		"contentRating": 1,
 		"languages": ["zh"],

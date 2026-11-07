@@ -260,8 +260,10 @@ impl Display for Url {
 					BASE_URL, order, tagid, isfull, anime, rgroupid, update, words, page
 				)
 			}
+			// linovelib serves search under /S6/; the /search/ path used by
+			// bilinovel.com is gone here and returns a 404 page.
 			Url::Search { query, page } => {
-				write!(f, "{}/search/{}_{}.html", BASE_URL, query, page)
+				write!(f, "{}/S6/{}_{}.html", BASE_URL, query, page)
 			}
 			Url::Top { order, page } => {
 				write!(f, "{}/top/{}/{}.html", BASE_URL, order, page)
