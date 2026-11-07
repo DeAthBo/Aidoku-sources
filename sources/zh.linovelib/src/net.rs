@@ -65,9 +65,8 @@ pub enum Url {
 
 impl Url {
 	pub fn request(&self) -> Result<Request> {
-		// Search lives at /S6/ and needs no jieqi ticket on this mirror; the
-		// old /search.html guard redirects to 127.0.0.1 and only produces
-		// failed requests inside the app.
+		// A browser UA is required: Cloudflare returns "Attention Required!"
+		// for the app's default agent even on plain catalog pages.
 		Ok(Request::get(self.to_string())?
 			.header("User-Agent", USER_AGENT)
 			.header("Origin", BASE_URL)
@@ -242,10 +241,12 @@ impl Display for Url {
 					BASE_URL, order, tagid, isfull, anime, rgroupid, update, words, page
 				)
 			}
-			// linovelib serves search under /S6/; the /search/ path used by
-			// bilinovel.com is gone here and returns a 404 page.
+			// /S6/ is the only route with real results, but Cloudflare serves
+			// it a JS challenge outside a browser; the app cannot run the
+			// challenge and loops forever. Reverted to the v1 /search/ route:
+			// no results, but no challenge either.
 			Url::Search { query, page } => {
-				write!(f, "{}/S6/{}_{}.html", BASE_URL, query, page)
+				write!(f, "{}/search/{}_{}.html", BASE_URL, query, page)
 			}
 			Url::Top { order, page } => {
 				write!(f, "{}/top/{}/{}.html", BASE_URL, order, page)
