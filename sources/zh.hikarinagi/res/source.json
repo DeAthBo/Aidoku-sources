@@ -1,0 +1,22 @@
+{
+	"info": {
+		"id": "zh.hikarinagi",
+		"name": "Hikarinagi",
+		"version": 1,
+		"url": "https://www.hikarinagi.org",
+		"contentRating": 1,
+		"languages": [
+			"zh"
+		]
+	},
+	"listings": [
+		{
+			"id": "popular",
+			"name": "人气"
+		},
+		{
+			"id": "latest",
+			"name": "最新更新"
+		}
+	]
+}
