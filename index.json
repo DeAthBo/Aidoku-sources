@@ -1,0 +1,166 @@
+{
+  "name": "DeAthBo's Aidoku Sources",
+  "sources": [
+    {
+      "id": "zh.cmanhua",
+      "name": "CManhua",
+      "version": 1,
+      "iconURL": "icons/zh.cmanhua-v1.png",
+      "downloadURL": "sources/zh.cmanhua-v1.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 1,
+      "baseURL": "https://cmanhua.com"
+    },
+    {
+      "id": "zh.dumanwu",
+      "name": "读漫屋",
+      "version": 1,
+      "iconURL": "icons/zh.dumanwu-v1.png",
+      "downloadURL": "sources/zh.dumanwu-v1.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 0,
+      "baseURL": "http://m.dumanwu1.com"
+    },
+    {
+      "id": "zh.favcomic",
+      "name": "喜漫漫画",
+      "version": 1,
+      "iconURL": "icons/zh.favcomic-v1.png",
+      "downloadURL": "sources/zh.favcomic-v1.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 1,
+      "baseURL": "https://www.favcomic.com"
+    },
+    {
+      "id": "zh.guazimanhua",
+      "name": "瓜子漫画",
+      "version": 3,
+      "iconURL": "icons/zh.guazimanhua-v3.png",
+      "downloadURL": "sources/zh.guazimanhua-v3.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 0,
+      "baseURL": "https://www.guazimanhua.com"
+    },
+    {
+      "id": "zh.hanabimanga",
+      "name": "花火漫画",
+      "version": 2,
+      "iconURL": "icons/zh.hanabimanga-v2.png",
+      "downloadURL": "sources/zh.hanabimanga-v2.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 1,
+      "baseURL": "https://web.hanabimanga.com"
+    },
+    {
+      "id": "zh.hikarinagi",
+      "name": "Hikarinagi",
+      "version": 1,
+      "iconURL": "icons/zh.hikarinagi-v1.png",
+      "downloadURL": "sources/zh.hikarinagi-v1.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 1,
+      "baseURL": "https://www.hikarinagi.org"
+    },
+    {
+      "id": "zh.kuaikanmanhua",
+      "name": "快看漫画",
+      "version": 1,
+      "iconURL": "icons/zh.kuaikanmanhua-v1.png",
+      "downloadURL": "sources/zh.kuaikanmanhua-v1.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 0,
+      "baseURL": "https://www.kuaikanmanhua.com"
+    },
+    {
+      "id": "zh.manhuaren",
+      "name": "漫画人",
+      "version": 1,
+      "iconURL": "icons/zh.manhuaren-v1.png",
+      "downloadURL": "sources/zh.manhuaren-v1.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 1,
+      "baseURL": "https://www.manhuaren.com"
+    },
+    {
+      "id": "zh.miaoqu",
+      "name": "喵趣漫画",
+      "version": 2,
+      "iconURL": "icons/zh.miaoqu-v2.png",
+      "downloadURL": "sources/zh.miaoqu-v2.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 0,
+      "baseURL": "https://www.miaoqumh.org"
+    },
+    {
+      "id": "zh.tencentcomics",
+      "name": "腾讯动漫",
+      "version": 1,
+      "iconURL": "icons/zh.tencentcomics-v1.png",
+      "downloadURL": "sources/zh.tencentcomics-v1.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 1,
+      "baseURL": "https://m.ac.qq.com"
+    },
+    {
+      "id": "zh.utifa",
+      "name": "Utifa",
+      "version": 1,
+      "iconURL": "icons/zh.utifa-v1.png",
+      "downloadURL": "sources/zh.utifa-v1.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 1,
+      "baseURL": "https://bx.yaimer.com"
+    },
+    {
+      "id": "zh.vomic",
+      "name": "vomic",
+      "version": 1,
+      "iconURL": "icons/zh.vomic-v1.png",
+      "downloadURL": "sources/zh.vomic-v1.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 0,
+      "baseURL": "https://vomicmh.com"
+    },
+    {
+      "id": "zh.webtoons",
+      "name": "WEBTOON 繁體中文",
+      "version": 1,
+      "iconURL": "icons/zh.webtoons-v1.png",
+      "downloadURL": "sources/zh.webtoons-v1.aix",
+      "languages": [
+        "zh"
+      ],
+      "contentRating": 0,
+      "altNames": [
+        "WEBTOON",
+        "Webtoon"
+      ],
+      "baseURL": "https://www.webtoons.com/zh-hant",
+      "minAppVersion": "0.7.2"
+    }
+  ]
+}
