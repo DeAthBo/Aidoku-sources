@@ -34,11 +34,20 @@ jobs:
             ~/.cargo/registry/index
             ~/.cargo/registry/cache
             ~/.cargo/git/db
+            sources/zh.cmanhua/target/
+            sources/zh.dumanwu/target/
+            sources/zh.favcomic/target/
             sources/zh.guazimanhua/target/
             sources/zh.hanabimanga/target/
+            sources/zh.hikarinagi/target/
+            sources/zh.kuaikanmanhua/target/
+            sources/zh.manhuaren/target/
             sources/zh.miaoqu/target/
+            sources/zh.tencentcomics/target/
+            sources/zh.utifa/target/
+            sources/zh.vomic/target/
             sources/zh.webtoons/target/
-          key: ${{ runner.os }}-cargo-${{ hashFiles('sources/zh.guazimanhua/Cargo.lock', 'sources/zh.hanabimanga/Cargo.lock', 'sources/zh.miaoqu/Cargo.lock', 'sources/zh.webtoons/Cargo.lock') }}
+          key: ${{ runner.os }}-cargo-${{ hashFiles('sources/zh.cmanhua/Cargo.lock', 'sources/zh.dumanwu/Cargo.lock', 'sources/zh.favcomic/Cargo.lock', 'sources/zh.guazimanhua/Cargo.lock', 'sources/zh.hanabimanga/Cargo.lock', 'sources/zh.hikarinagi/Cargo.lock', 'sources/zh.kuaikanmanhua/Cargo.lock', 'sources/zh.manhuaren/Cargo.lock', 'sources/zh.miaoqu/Cargo.lock', 'sources/zh.tencentcomics/Cargo.lock', 'sources/zh.utifa/Cargo.lock', 'sources/zh.vomic/Cargo.lock', 'sources/zh.webtoons/Cargo.lock') }}
           restore-keys: ${{ runner.os }}-cargo-
 
       - uses: ./.github/actions/install-aidoku-cli
@@ -47,7 +56,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          for source in sources/zh.guazimanhua sources/zh.hanabimanga sources/zh.miaoqu sources/zh.webtoons; do
+          for source in sources/zh.cmanhua sources/zh.dumanwu sources/zh.favcomic sources/zh.guazimanhua sources/zh.hanabimanga sources/zh.hikarinagi sources/zh.kuaikanmanhua sources/zh.manhuaren sources/zh.miaoqu sources/zh.tencentcomics sources/zh.utifa sources/zh.vomic sources/zh.webtoons; do
             [[ -f "$source/Cargo.toml" ]] || continue
 
             echo "::group::Packaging $source"
@@ -60,7 +69,21 @@ jobs:
 
       - name: Build source list
         run: |
-          aidoku build sources/zh.guazimanhua/package.aix sources/zh.hanabimanga/package.aix sources/zh.miaoqu/package.aix sources/zh.webtoons/package.aix --name "DeAthBo's Aidoku Sources"
+          aidoku build \
+            sources/zh.cmanhua/package.aix \
+            sources/zh.dumanwu/package.aix \
+            sources/zh.favcomic/package.aix \
+            sources/zh.guazimanhua/package.aix \
+            sources/zh.hanabimanga/package.aix \
+            sources/zh.hikarinagi/package.aix \
+            sources/zh.kuaikanmanhua/package.aix \
+            sources/zh.manhuaren/package.aix \
+            sources/zh.miaoqu/package.aix \
+            sources/zh.tencentcomics/package.aix \
+            sources/zh.utifa/package.aix \
+            sources/zh.vomic/package.aix \
+            sources/zh.webtoons/package.aix \
+            --name "DeAthBo's Aidoku Sources"
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.7.2
