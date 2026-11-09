@@ -128,8 +128,9 @@ impl ChapterDto {
 	}
 }
 
-/// Chapters arrive newest-first, so unnumbered titles fall back to their
-/// position counted from the oldest chapter.
+/// `chapters` is newest-first (the caller reverses the API's oldest-first
+/// list), so unnumbered titles fall back to their position counted from the
+/// oldest chapter.
 pub fn number_chapters(chapters: &mut [Chapter]) {
 	let count = chapters.len();
 	for (index, chapter) in chapters.iter_mut().enumerate() {
