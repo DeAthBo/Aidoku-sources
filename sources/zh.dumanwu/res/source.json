@@ -1,0 +1,22 @@
+{
+	"info": {
+		"id": "zh.dumanwu",
+		"name": "读漫屋",
+		"version": 1,
+		"url": "http://m.dumanwu1.com",
+		"contentRating": 0,
+		"languages": [
+			"zh"
+		]
+	},
+	"listings": [
+		{
+			"id": "popular",
+			"name": "人气"
+		},
+		{
+			"id": "latest",
+			"name": "最新更新"
+		}
+	]
+}
