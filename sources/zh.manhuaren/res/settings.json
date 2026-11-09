@@ -1,0 +1,23 @@
+[
+	{
+		"type": "group",
+		"title": "账号",
+		"footer": "如自动获取的匿名凭据失效，可从漫画人官方APP或其他设备拷贝用户ID与Token填入。",
+		"items": [
+			{
+				"type": "text",
+				"key": "userId",
+				"title": "用户ID",
+				"placeholder": "无用户ID，点击设置",
+				"refreshes": ["listings", "content"]
+			},
+			{
+				"type": "text",
+				"key": "token",
+				"title": "令牌(Token)",
+				"placeholder": "无令牌，点击设置",
+				"refreshes": ["listings", "content"]
+			}
+		]
+	}
+]
