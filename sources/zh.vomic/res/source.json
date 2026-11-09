@@ -1,0 +1,22 @@
+{
+	"info": {
+		"id": "zh.vomic",
+		"name": "vomic",
+		"version": 1,
+		"url": "https://vomicmh.com",
+		"contentRating": 0,
+		"languages": [
+			"zh"
+		]
+	},
+	"listings": [
+		{
+			"id": "popular",
+			"name": "人气"
+		},
+		{
+			"id": "latest",
+			"name": "最新更新"
+		}
+	]
+}

@@ -1,0 +1,24 @@
+[
+	{
+		"type": "group",
+		"title": "账号",
+		"footer": "部分章节需要登录后才能查看，请填写邮箱和密码。",
+		"items": [
+			{
+				"type": "text",
+				"key": "email",
+				"title": "邮箱",
+				"placeholder": "user@example.com",
+				"autocapitalizationType": 0,
+				"autocorrectionDisabled": true
+			},
+			{
+				"type": "text",
+				"key": "password",
+				"title": "密码",
+				"autocapitalizationType": 0,
+				"autocorrectionDisabled": true
+			}
+		]
+	}
+]
