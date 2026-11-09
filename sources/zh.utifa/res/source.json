@@ -1,0 +1,22 @@
+{
+	"info": {
+		"id": "zh.utifa",
+		"name": "Utifa",
+		"version": 1,
+		"url": "https://bx.yaimer.com",
+		"contentRating": 1,
+		"languages": [
+			"zh"
+		]
+	},
+	"listings": [
+		{
+			"id": "popular",
+			"name": "人气"
+		},
+		{
+			"id": "latest",
+			"name": "最新更新"
+		}
+	]
+}
