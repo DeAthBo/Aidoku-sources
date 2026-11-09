@@ -1,0 +1,66 @@
+[
+	{
+		"type": "group",
+		"title": "账号",
+		"footer": "部分章节需要登录后才可阅读。留空则跳过自动登录。",
+		"items": [
+			{
+				"type": "text",
+				"key": "username",
+				"title": "账号 (喜漫注册邮箱)",
+				"placeholder": "user@example.com",
+				"autocapitalizationType": 0,
+				"autocorrectionDisabled": true
+			},
+			{
+				"type": "text",
+				"key": "password",
+				"title": "密码",
+				"autocapitalizationType": 0,
+				"autocorrectionDisabled": true
+			}
+		]
+	},
+	{
+		"type": "group",
+		"title": "浏览",
+		"items": [
+			{
+				"type": "select",
+				"key": "rankType",
+				"title": "热门排行",
+				"values": ["1", "2", "3"],
+				"titles": ["周排名", "月排名", "总排名"],
+				"default": "1"
+			},
+			{
+				"type": "select",
+				"key": "mangaType",
+				"title": "漫画类型",
+				"values": ["boy-1", "girl-2", "picture-3", "r18-4"],
+				"titles": ["少男漫画", "少女漫画", "性感图库", "成人漫画"],
+				"default": "boy-1"
+			}
+		]
+	},
+	{
+		"type": "group",
+		"title": "镜像域名",
+		"footer": "主站无法访问时切换到其他镜像。",
+		"items": [
+			{
+				"type": "select",
+				"key": "mirror",
+				"title": "当前域名",
+				"values": [
+					"https://www.favcomic.com",
+					"https://www.favcomic.xyz",
+					"https://www.favcomic.net",
+					"https://www.favcomic.cc"
+				],
+				"titles": ["favcomic.com", "favcomic.xyz", "favcomic.net", "favcomic.cc"],
+				"default": "https://www.favcomic.com"
+			}
+		]
+	}
+]
