@@ -1,0 +1,26 @@
+{
+	"info": {
+		"id": "zh.tencentcomics",
+		"name": "腾讯动漫",
+		"version": 1,
+		"url": "https://m.ac.qq.com",
+		"urls": [
+			"https://m.ac.qq.com",
+			"https://ac.qq.com"
+		],
+		"contentRating": 1,
+		"languages": [
+			"zh"
+		]
+	},
+	"listings": [
+		{
+			"id": "popular",
+			"name": "人气"
+		},
+		{
+			"id": "latest",
+			"name": "最新更新"
+		}
+	]
+}

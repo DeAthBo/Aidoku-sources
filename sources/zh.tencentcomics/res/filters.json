@@ -1,0 +1,70 @@
+[
+	{
+		"type": "select",
+		"title": "人气排序",
+		"isGenre": false,
+		"canExclude": false,
+		"options": ["热门人气", "更新时间"],
+		"ids": ["hot/", "time/"]
+	},
+	{
+		"type": "select",
+		"title": "属性",
+		"isGenre": false,
+		"canExclude": false,
+		"options": ["全部", "付费", "免费"],
+		"ids": ["", "vip/2/", "vip/1/"]
+	},
+	{
+		"type": "select",
+		"title": "进度",
+		"isGenre": false,
+		"canExclude": false,
+		"options": ["全部", "连载中", "已完结"],
+		"ids": ["", "finish/1/", "finish/2/"]
+	},
+	{
+		"type": "select",
+		"title": "标签",
+		"isGenre": true,
+		"canExclude": false,
+		"options": [
+			"全部",
+			"恋爱",
+			"玄幻",
+			"异能",
+			"恐怖",
+			"剧情",
+			"科幻",
+			"悬疑",
+			"奇幻",
+			"冒险",
+			"犯罪",
+			"动作",
+			"日常",
+			"竞技",
+			"武侠",
+			"历史",
+			"战争"
+		],
+		"ids": [
+			"",
+			"105",
+			"101",
+			"103",
+			"110",
+			"106",
+			"108",
+			"112",
+			"102",
+			"104",
+			"111",
+			"109",
+			"113",
+			"114",
+			"115",
+			"116",
+			"117"
+		]
+	}
+]
