@@ -1,0 +1,24 @@
+[
+	{
+		"type": "note",
+		"text": "按名称搜索时，以下筛选无效"
+	},
+	{
+		"type": "select",
+		"id": "sort",
+		"title": "排序",
+		"isGenre": false,
+		"canExclude": false,
+		"options": ["更新时间", "人气", "收藏", "章节数"],
+		"ids": ["updated_desc", "views_desc", "bookmark_desc", "chapter_desc"]
+	},
+	{
+		"type": "select",
+		"id": "status",
+		"title": "状态",
+		"isGenre": false,
+		"canExclude": false,
+		"options": ["全部", "连载中", "已完结", "暂停"],
+		"ids": ["", "ongoing", "completed", "hiatus"]
+	}
+]
